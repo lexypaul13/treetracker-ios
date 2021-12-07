@@ -10,12 +10,6 @@ import UIKit
 
 class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresenting {
 
-    @IBOutlet private var usernameIconImageView: UIImageView! {
-        didSet {
-            usernameIconImageView.contentMode = .left
-            usernameIconImageView.tintColor = Asset.Colors.primaryGreen.color
-        }
-    }
     @IBOutlet private var usernameLabel: UILabel! {
         didSet {
             usernameLabel.font = FontFamily.Lato.regular.font(size: 20.0)
@@ -23,11 +17,7 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
             usernameLabel.textAlignment = .left
         }
     }
-    @IBOutlet private var usernameUnderlineView: UIView! {
-        didSet {
-            usernameUnderlineView.backgroundColor = Asset.Colors.primaryGreen.color
-        }
-    }
+  
     @IBOutlet private var firstNameTextField: SignInTextField! {
         didSet {
             firstNameTextField.delegate = self
@@ -77,8 +67,6 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
         addEndEditingBackgroundTapGesture()
         addKeyboardObservers()
         usernameLabel.text = viewModel?.usernameText
-        usernameIconImageView.image = viewModel?.usernameIcon
-
     }
 }
 

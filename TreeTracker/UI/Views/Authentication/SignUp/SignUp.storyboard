@@ -18,45 +18,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-fd-X58" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
-                                <rect key="frame" x="27" y="208" width="374" height="18.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Fx-sQO" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
-                                <rect key="frame" x="27" y="252" width="374" height="18.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ORGANIZATION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-pX-V4Z" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
-                                <rect key="frame" x="27" y="291" width="374" height="18.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-eg-Lcl">
-                                <rect key="frame" x="27" y="130" width="334" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-NH-gzS" customClass="PrimaryButton" customModule="TreeTracker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="353" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="PrimaryGreen"/>
-                                <state key="normal" title="SIGN UP">
-                                    <color key="titleColor" name="GrayDark"/>
-                                </state>
-                                <connections>
-                                    <action selector="signUpButtonPressed" destination="Vq6-qS-O62" eventType="touchUpInside" id="akd-mR-syj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="pk0-Tx-KwI">
+                                <rect key="frame" x="20" y="181" width="374" height="342"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-eg-Lcl">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LTU-eo-FmZ"/>
+                                            <constraint firstAttribute="width" constant="374" id="nlg-yc-m45"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-fd-X58" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="73" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="Z0X-KH-gct"/>
+                                            <constraint firstAttribute="height" constant="50" id="rqb-CQ-yfe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Fx-sQO" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="146" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="46m-f4-3L8"/>
+                                            <constraint firstAttribute="height" constant="50" id="Rkf-bx-QuB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ORGANIZATION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-pX-V4Z" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="219" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1iH-Qy-g9k"/>
+                                            <constraint firstAttribute="width" constant="374" id="rzH-cL-EKM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-NH-gzS" customClass="PrimaryButton" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="292" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="Nmm-By-hUX"/>
+                                            <constraint firstAttribute="height" constant="50" id="oTJ-eN-xhD"/>
+                                        </constraints>
+                                        <state key="normal" title="SIGN UP">
+                                            <color key="titleColor" name="GrayDark"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButtonPressed" destination="Vq6-qS-O62" eventType="touchUpInside" id="akd-mR-syj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T1m-Ef-7d1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pk0-Tx-KwI" secondAttribute="trailing" constant="20" id="5rs-AL-fUm"/>
+                            <constraint firstItem="pk0-Tx-KwI" firstAttribute="top" secondItem="49U-NM-v7F" secondAttribute="top" constant="181" id="hh3-cv-BRK"/>
+                            <constraint firstItem="pk0-Tx-KwI" firstAttribute="leading" secondItem="49U-NM-v7F" secondAttribute="leading" constant="20" id="pz4-ua-6pa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="firstNameTextField" destination="rGp-fd-X58" id="qUx-qf-w6M"/>
@@ -68,15 +92,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8u-1I-LRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-536" y="87"/>
+            <point key="canvasLocation" x="-536.231884057971" y="86.383928571428569"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="GrayDark">
             <color red="0.13333333333333333" green="0.14901960784313725" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PrimaryGreen">
-            <color red="0.52549019607843139" green="0.76078431372549016" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

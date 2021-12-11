@@ -12,20 +12,26 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
 
     @IBOutlet private var usernameLabel: UILabel! {
         didSet {
-            usernameLabel.font = FontFamily.Lato.regular.font(size: 20.0)
-            usernameLabel.textColor = Asset.Colors.primaryGreen.color
+            usernameLabel.font = FontFamily.Lato.regular.font(size: 45.0)
+            usernameLabel.textColor = .white
             usernameLabel.textAlignment = .left
+            usernameLabel.text = viewModel?.usernameText
         }
     }
-  
     @IBOutlet private var firstNameTextField: SignInTextField! {
         didSet {
             firstNameTextField.delegate = self
             firstNameTextField.keyboardType = .default
             firstNameTextField.returnKeyType = .next
             firstNameTextField.autocapitalizationType = .words
-            firstNameTextField.placeholder = L10n.SignUp.TextInput.FirstName.placeholder
+            firstNameTextField.textColor = .white
             firstNameTextField.validationState = .normal
+            firstNameTextField.attributedPlaceholder = NSAttributedString( string:  L10n.SignUp.TextInput.FirstName.placeholder,attributes: [NSAttributedString.Key.foregroundColor: Asset.Colors.grayLight.color])
+            firstNameTextField.backgroundColor = .black
+            firstNameTextField.layer.borderColor = UIColor.lightGray.cgColor
+            firstNameTextField.layer.cornerRadius = 10.0
+            firstNameTextField.layer.borderWidth = 1.0
+            firstNameTextField.clipsToBounds = true
         }
     }
     @IBOutlet private var lastNameTextField: SignInTextField! {
@@ -34,8 +40,14 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
             lastNameTextField.keyboardType = .default
             lastNameTextField.returnKeyType = .next
             lastNameTextField.autocapitalizationType = .words
-            lastNameTextField.placeholder = L10n.SignUp.TextInput.LastName.placeholder
+            lastNameTextField.textColor = .white
             lastNameTextField.validationState = .normal
+            lastNameTextField.attributedPlaceholder = NSAttributedString( string:L10n.SignUp.TextInput.LastName.placeholder,attributes: [NSAttributedString.Key.foregroundColor: Asset.Colors.grayLight.color])
+            lastNameTextField.backgroundColor = .black
+            lastNameTextField.layer.borderColor = UIColor.lightGray.cgColor
+            lastNameTextField.layer.cornerRadius = 10.0
+            lastNameTextField.layer.borderWidth = 1.0
+            lastNameTextField.clipsToBounds = true
         }
     }
     @IBOutlet private var organizationTextField: SignInTextField! {
@@ -44,13 +56,20 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
             organizationTextField.keyboardType = .default
             organizationTextField.returnKeyType = .done
             organizationTextField.autocapitalizationType = .words
-            organizationTextField.placeholder = L10n.SignUp.TextInput.Organization.placeholder
+            firstNameTextField.textColor = .white
             organizationTextField.validationState = .normal
+            organizationTextField.attributedPlaceholder = NSAttributedString( string:L10n.SignUp.TextInput.Organization.placeholder,attributes: [NSAttributedString.Key.foregroundColor: Asset.Colors.grayLight.color])
+            organizationTextField.backgroundColor = .black
+            organizationTextField.layer.borderColor = UIColor.lightGray.cgColor
+            organizationTextField.layer.cornerRadius = 10.0
+            organizationTextField.layer.borderWidth = 1.0
+            organizationTextField.clipsToBounds = true
         }
     }
     @IBOutlet private var signUpButton: UIButton! {
         didSet {
             signUpButton.setTitle(L10n.SignUp.SignUpButton.title, for: .normal)
+            signUpButton.backgroundColor =  Asset.Colors.secondaryGreen.color
             signUpButton.isEnabled = false
         }
     }
@@ -66,7 +85,7 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
         super.viewDidLoad()
         addEndEditingBackgroundTapGesture()
         addKeyboardObservers()
-        usernameLabel.text = viewModel?.usernameText
+        self.view.backgroundColor = .black
     }
 }
 
@@ -77,10 +96,8 @@ private extension SignUpViewController {
         viewModel?.signUp()
     }
 }
-
 // MARK: - UITextFieldDelegate
 extension SignUpViewController: UITextFieldDelegate {
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         switch textField {

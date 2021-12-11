@@ -19,49 +19,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="pk0-Tx-KwI">
-                                <rect key="frame" x="20" y="181" width="374" height="342"/>
+                                <rect key="frame" x="20" y="181" width="374" height="327"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-eg-Lcl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LTU-eo-FmZ"/>
-                                            <constraint firstAttribute="width" constant="374" id="nlg-yc-m45"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-fd-X58" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="73" width="374" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="FIRST NAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-fd-X58" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="73" width="374" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="Z0X-KH-gct"/>
-                                            <constraint firstAttribute="height" constant="50" id="rqb-CQ-yfe"/>
+                                            <constraint firstAttribute="height" constant="45" id="rqb-CQ-yfe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Fx-sQO" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="146" width="374" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LAST NAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Fx-sQO" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="141" width="374" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="46m-f4-3L8"/>
-                                            <constraint firstAttribute="height" constant="50" id="Rkf-bx-QuB"/>
+                                            <constraint firstAttribute="height" constant="45" id="Rkf-bx-QuB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ORGANIZATION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-pX-V4Z" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="219" width="374" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="ORGANIZATION" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-pX-V4Z" customClass="SignInTextField" customModule="TreeTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="209" width="374" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="1iH-Qy-g9k"/>
-                                            <constraint firstAttribute="width" constant="374" id="rzH-cL-EKM"/>
+                                            <constraint firstAttribute="height" constant="45" id="1iH-Qy-g9k"/>
                                         </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-NH-gzS" customClass="PrimaryButton" customModule="TreeTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="292" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="277" width="374" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="Nmm-By-hUX"/>
                                             <constraint firstAttribute="height" constant="50" id="oTJ-eN-xhD"/>
                                         </constraints>
                                         <state key="normal" title="SIGN UP">

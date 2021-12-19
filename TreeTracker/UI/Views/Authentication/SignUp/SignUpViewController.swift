@@ -27,6 +27,8 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
             firstNameTextField.textColor = .white
             firstNameTextField.validationState = .normal
             firstNameTextField.attributedPlaceholder = NSAttributedString( string:  L10n.SignUp.TextInput.FirstName.placeholder,attributes: [NSAttributedString.Key.foregroundColor: Asset.Colors.grayLight.color])
+            firstNameTextField.leftViewMode = .always
+            firstNameTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:8,height:0))
             firstNameTextField.backgroundColor = .black
             firstNameTextField.layer.borderColor = UIColor.lightGray.cgColor
             firstNameTextField.layer.cornerRadius = 10.0
@@ -43,6 +45,8 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
             lastNameTextField.textColor = .white
             lastNameTextField.validationState = .normal
             lastNameTextField.attributedPlaceholder = NSAttributedString( string:L10n.SignUp.TextInput.LastName.placeholder,attributes: [NSAttributedString.Key.foregroundColor: Asset.Colors.grayLight.color])
+            lastNameTextField.leftViewMode = .always
+            lastNameTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:8,height:0))
             lastNameTextField.backgroundColor = .black
             lastNameTextField.layer.borderColor = UIColor.lightGray.cgColor
             lastNameTextField.layer.cornerRadius = 10.0
@@ -56,9 +60,11 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
             organizationTextField.keyboardType = .default
             organizationTextField.returnKeyType = .done
             organizationTextField.autocapitalizationType = .words
-            firstNameTextField.textColor = .white
+            organizationTextField.textColor = .white
             organizationTextField.validationState = .normal
             organizationTextField.attributedPlaceholder = NSAttributedString( string:L10n.SignUp.TextInput.Organization.placeholder,attributes: [NSAttributedString.Key.foregroundColor: Asset.Colors.grayLight.color])
+            organizationTextField.leftViewMode = .always
+            organizationTextField.leftView = UIView(frame: CGRect(x:0,y:0,width:8,height:0))
             organizationTextField.backgroundColor = .black
             organizationTextField.layer.borderColor = UIColor.lightGray.cgColor
             organizationTextField.layer.cornerRadius = 10.0
@@ -86,6 +92,8 @@ class SignUpViewController: UIViewController, KeyboardDismissing, AlertPresentin
         addEndEditingBackgroundTapGesture()
         addKeyboardObservers()
         self.view.backgroundColor = .black
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.backgroundColor: UIColor.white]
     }
 }
 
